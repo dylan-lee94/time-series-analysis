@@ -1,15 +1,10 @@
 # crypto_statistics
 University and Private Projects based on Cryptocurrencies
 
-# Things to do
-## Solar System Exploration, 1950s – 1960s
+## To-Do List
 
-- [ ] Mercury
-- [x] Venus
-- [x] Earth (Orbit/Moon)
-- [x] Mars
-- [ ] Jupiter
-- [ ] Saturn
-- [ ] Uranus
-- [ ] Neptune
-- [ ] Comet Haley
+- [ ] Tail: Fit Generalized Pareto distribution
+- [ ] Tail: Fit Generalized extreme value distribution 
+- [ ] Tail: Fit Exponential Distributions
+- [ ] Tail&Body: Statistical Test (Kolmogorow-Smirnow Test , Anderson–Darling Test)
+
