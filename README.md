@@ -1,4 +1,4 @@
-# crypto_statistics
+# statistical-tools
 Projects based on statistical analysis of Cryptocurrencies
 ### Mututal Information
 Computing the Mutual Information of Cryptocurrency pairs and between Crytocurrency and Sentiment pairs.  Includes the calculation of p-values for MI through Permutation Tests.
