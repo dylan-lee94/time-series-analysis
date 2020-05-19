@@ -15,7 +15,8 @@ __To-Do List__
 
 
 ### Distribution Fitting
-Parametric and non-parametric estimation of the Body & Tail PDF of a Cryptocurreny. 
+Parametric and non-parametric estimation of the Body & Tail PDF of a Cryptocurreny. Includes the computation of Power Law Tail Exponents and the calculation of Confidence Intervals through Bootstrapping. 
+
 __To-Do List__
 - [ ] Kernel Density Estimation
 - [ ] Tail: Fit Generalized Pareto distribution,  Generalized extreme value distribution,  Exponential Distributions
