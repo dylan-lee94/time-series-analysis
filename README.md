@@ -15,8 +15,8 @@ __To-Do List__
 
 
 ### Distribution Fitting
+Parametric and non-parametric estimation of the Body & Tail PDF of a Cryptocurreny. 
 __To-Do List__
-- [ ] Tail: Fit Generalized Pareto distribution
-- [ ] Tail: Fit Generalized extreme value distribution 
-- [ ] Tail: Fit Exponential Distributions
+- [ ] Kernel Density Estimation
+- [ ] Tail: Fit Generalized Pareto distribution,  Generalized extreme value distribution,  Exponential Distributions
 - [ ] Tail&Body: Statistical Test (Kolmogorow-Smirnow Test , Anderson–Darling Test)
