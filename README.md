@@ -1,5 +1,5 @@
 # crypto_statistics
-University and Private Projects based on statistical analysis of Cryptocurrencies
+Projects based on statistical analysis of Cryptocurrencies
 
 ## To-Do List
 
