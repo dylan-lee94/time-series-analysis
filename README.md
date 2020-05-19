@@ -1,7 +1,12 @@
 # crypto_statistics
 Projects based on statistical analysis of Cryptocurrencies
-## Mututal Information
+### Mututal Information
 Computing the Mutual Information of Cryptocurrency pairs and between Crytocurrency and Sentiment pairs.  Includes a Statistical Significance Test (Permutation Test) 
+
+### Scaling Behaviour
+
+
+### Value at Risk
 
 ## 
 ## To-Do List
