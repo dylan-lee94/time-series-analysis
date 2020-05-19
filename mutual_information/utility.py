@@ -4,7 +4,7 @@ import pandas as pd
 
 # Load Data
 def load_currency(name,columns):
-    path = "../Data/dataset"
+    path = "../data/dataset"
     df = pd.read_csv(os.path.join(path,name+'_merged.txt'), sep = ',', header=0)
     df.time = pd.to_datetime(df.time,unit='s')
     df = df.set_index('time')
@@ -18,7 +18,7 @@ def load_currency(name,columns):
 #%%
 
 def load_all_currencies(names,columns):
-    path = "../Data/dataset"
+    path = "../data/dataset"
 
     li = []
 
