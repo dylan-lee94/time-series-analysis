@@ -1,6 +1,9 @@
 # crypto_statistics
 Projects based on statistical analysis of Cryptocurrencies
+## Mututal Information
+Computing the Mutual Information of Cryptocurrency pairs and between Crytocurrency and Sentiment pairs.  Includes a Statistical Significance Test (Permutation Test) 
 
+## 
 ## To-Do List
 
 - [ ] Tail: Fit Generalized Pareto distribution
