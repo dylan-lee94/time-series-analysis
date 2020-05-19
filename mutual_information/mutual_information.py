@@ -43,12 +43,12 @@ def conditional_entropy(x,y,nbins=20):
     p_y = np.sum(p_xy,axis=0)
     
     # Conditional Entropy for Rows:
-    p_x = np.tile(p_x.reshape(-1,1), (1,20))
+    p_x = np.tile(p_x.reshape(-1,1), (1,nbins))
     tmp = np.where(p_xy>0,p_xy*np.log2(p_xy/p_x),0)
     Hyx_conditional = -np.sum(np.sum(tmp))
 
     # Conditional Entropy for Columns:
-    p_y = np.tile(p_y, (20,1))
+    p_y = np.tile(p_y, (nbins,1))
     tmp = np.where(p_xy>0,p_xy*np.log2(p_xy/p_y),0)
     Hxy_conditional = -np.sum(np.sum(tmp))
 
@@ -137,11 +137,11 @@ def mutual_information(x,y,nbins=20):
 #     count_y = np.sum(count_xy,axis=0)
 
 #     # Conditional Relative Frequency for Rows:
-#     count_x = np.tile(count_x.reshape(-1,1), (1,20))
+#     count_x = np.tile(count_x.reshape(-1,1), (1,nbins))
 #     p_yx_cond = count_xy/count_x
 
 #     # Conditional Relative Frequency for Columns:
-#     count_y = np.tile(count_y, (20,1))
+#     count_y = np.tile(count_y, (nbins,1))
 #     p_xy_cond = count_xy/count_y
 
 #     return p_yx_cond,p_xy_cond
