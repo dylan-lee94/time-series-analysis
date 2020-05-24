@@ -3,8 +3,10 @@
 import numpy as np
 from tqdm.notebook import tqdm
 import pandas as pd
+import sys
 
 # Local Imports
+sys.path.insert(0, '../')
 from utility import load_currency
 from mutual_information import mutual_information
 
