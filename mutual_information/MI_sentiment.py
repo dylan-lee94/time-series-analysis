@@ -1,7 +1,7 @@
 # In this script we analyze the mutual information with respect to Currency and its twitter sentiment
 # %% Imports
 import pandas as pd
-from tqdm.notebook import tqdm
+from tqdm import tqdm
 import numpy as np
 import sys
 
