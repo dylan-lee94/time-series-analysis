@@ -1,22 +1,19 @@
-# In this script we analyze the mutual information with respect to BTC and its twitter sentiment
-# %% Load and prepare the data
-import numpy as np
-from tqdm.notebook import tqdm
+# In this script we analyze the mutual information with respect to Currency and its twitter sentiment
+# %% Imports
 import pandas as pd
+from tqdm.notebook import tqdm
+import numpy as np
 import sys
 
 # Local Imports
 sys.path.insert(0, '../')
 from utility import load_currency
 from mutual_information import mutual_information
-
-# Choose the Cryptocurrency and the features to analyse
+# %% Choose the Cryptocurrency and the features to analyse
 coin = 'DASH'
 features = ['logclose','positive_score_en', 'negative_score_en', 'score_en', 'positive_volume_en', 'negative_volume_en', 'volume_ratio_en', 'total_volume_en']
 df = load_currency(coin,columns=features)
 
-
-df
 # %% Calculate log return
 
 df['logreturn'] = df.logclose.diff()
@@ -82,5 +79,3 @@ NMI_matrix = pd.DataFrame(data=np.row_stack((NMI_matrix,NMI_p_value)),columns=df
 print(f"Mututal Information with p-values in lower triangle:\n {MI_matrix}")
 
 print(f"Normalized Mututal Information with p-values in lower triangle:\n {NMI_matrix}")
-
-# %%
