@@ -1,4 +1,5 @@
-#%% Load and prepare the data
+# In this script we analyze the mutual information with respect to Currency Pairs
+# %% Imports
 import pandas as pd
 from tqdm.notebook import tqdm
 import numpy as np
@@ -9,7 +10,7 @@ sys.path.insert(0, '../')
 from utility import load_all_currencies
 from mutual_information import mutual_information
 
-# Choose the Cryptocurrencies and the features to analyse
+#%% Choose the Cryptocurrencies and the features to analyse
 coins = ['DASH', 'ETC', 'ETH', 'XMR', 'BCN', 'ICX']
 feature = ['logclose']
 df = load_all_currencies(names=coins,columns=feature)
