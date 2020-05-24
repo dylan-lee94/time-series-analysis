@@ -51,5 +51,5 @@ def histnorm(x,n_bins=20):
     count, bin_edges = np.histogram(x,n_bins)
     bin_centers = (bin_edges[:-1] + bin_edges[1:])*0.5
     widths = np.diff(bin_edges)
-    f = count/(count*widths).sum()
+    f = count/(np.sum(count)*widths)
     return (f,bin_centers)
