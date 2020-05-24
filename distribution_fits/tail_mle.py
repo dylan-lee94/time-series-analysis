@@ -1,3 +1,5 @@
+import numpy as np
+
 def power_law_fit(x, tail='right', q=0.1):
     """Function to fit the Power Law Distribution to the right or left tail of returns.
 
@@ -46,7 +48,7 @@ def bootstrap_tail(x, q=0.1,Nbts=10000,bts=0.8, p=0.9,tail='right'):
     # Collect bootstrap estimates for tail exponent
     alpha_bts = [] 
 
-    for i in range(Nbts):
+    for _ in range(Nbts):
 
         # Random permutation of returns
         x_bts = np.random.permutation(x) 
