@@ -1,4 +1,4 @@
-# statistical-tools
+# time-series-analysis
 Projects based on statistical analysis of Cryptocurrencies
 ### Dependency
 Computing the Mutual Information and Correlation (linear & non-linear) of Cryptocurrency pairs and between Crytocurrency and Sentiment pairs.  Includes the calculation of p-values throuh a permutation tests and Confidence Intervals throuhg bootstrapping.
