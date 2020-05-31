@@ -79,13 +79,13 @@ def variance_ratio(ts: np.ndarray, lags: Union[int,List[int]]=2, alpha: float=0.
 
         # Compute Heteroscedasticity robust S.E.
         else:
-            denominator =  sum((return_1 -mu)**2)**2
+            denom =  sum((return_1 -mu)**2)
             asymptotic_var = 0.0
             for j in range(1,q):
 
                 # numerator = sum(np.square(np.log(ts[j+1:]/ts[j:-1])-mu)*np.square(np.log(ts[1:-j]/ts[:-(j+1)])-mu)) 
-                numerator = np.square(return_1[j:]) @ np.square(return_1[:-j])
-                delta = numerator/denominator
+                numer = np.square(return_1[j:]-mu) @ np.square(return_1[:-j]-mu)
+                delta = numer/(denom**2)
                 asymptotic_var += np.square(2*(q-j)/q)*delta
         
         # Compute Test Statistic
@@ -99,3 +99,11 @@ def variance_ratio(ts: np.ndarray, lags: Union[int,List[int]]=2, alpha: float=0.
     h = (p_val < alpha).astype(int)
 
     return h, p_val,Z_list,ratio
+
+#%%
+# random.seed(420)
+# trend = 0.25  #  The larger this number the stronger the trend, hence larger zscore and pval
+# bias = 1000   #  This is to make sure that the time series does not go negative
+#   a = log((random.randn(1000)+bias)); #Mean reverting: hurst very small, vratio should be small
+# a = np.cumsum(np.random.randn(10000)+trend)+bias; #trending: hurst > 0.5;
+#   a = log(cumsum(random.randn(10000)) + bias); #random walk: hurst ~ 0.5
