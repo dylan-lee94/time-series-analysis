@@ -1,8 +1,6 @@
 #%%
 import sys
 import numpy as np 
-
-# sys.path.insert(0,'../')
 from utility import load_currency
 
 df = load_currency('DASH', columns=['close','open','high','low'])
