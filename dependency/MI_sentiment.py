@@ -32,6 +32,7 @@ for i in range(nr_col):
            MI,NMI = mutual_information(df.iloc[:,i],logreturn)
            MI_matrix[:,i] = MI
            NMI_matrix[:,i] = NMI
+           
 # %% Calculate the p-value by the permutation test:
 
 # For reconstruction
@@ -57,7 +58,7 @@ for _ in tqdm(range(n_shuffle)):
     for i in range(nr_col):
                 MI_rand,NMI_rand = mutual_information(df_shuffled.iloc[:,i],logreturn)
 
-                # Lower triangle for p_value
+                # p_value
                 if MI_rand > MI_matrix[:,i]:
                     MI_p_value[:,i] += 1
 
@@ -68,14 +69,12 @@ for _ in tqdm(range(n_shuffle)):
 # Calculate the relative frequency
 MI_p_value = MI_p_value/n_shuffle
 NMI_p_value = NMI_p_value/n_shuffle
-# %% Combine the results in one Matrix
 
-# DataFrame
+# %% Combine the results in one DataFrame
 MI_matrix = pd.DataFrame(data=np.row_stack((MI_matrix,MI_p_value)),columns=df.columns,index=[coin,'p-values'])
 NMI_matrix = pd.DataFrame(data=np.row_stack((NMI_matrix,NMI_p_value)),columns=df.columns,index=[coin,'p-values'])
 
 
 # %%
-print(f"Mututal Information with p-values in lower triangle:\n {MI_matrix}")
-
-print(f"Normalized Mututal Information with p-values in lower triangle:\n {NMI_matrix}")
+print(f"Mututal Information with p-values:\n {MI_matrix}")
+print(f"Normalized Mututal Information with p-values:\n {NMI_matrix}")
