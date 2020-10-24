@@ -5,7 +5,7 @@ import numpy as np
 #%% Load a singe Cryptocurrency
 
 def load_currency(name,columns):
-    path = "../data/dataset"
+    path = "data/dataset"
     df = pd.read_csv(os.path.join(path,name+'_merged.txt'), sep = ',', header=0)
     df.time = pd.to_datetime(df.time,unit='s')
     df = df.set_index('time')
@@ -21,7 +21,7 @@ def load_currency(name,columns):
 #%% Load several Cryptocurrencies
 
 def load_all_currencies(names,columns):
-    path = "../data/dataset"
+    path = "data/dataset"
 
     li = []
 
