@@ -1,16 +1,18 @@
 # time-series-analysis
 Projects based on statistical analysis of Cryptocurrencies
+
 ### Dependency
-Computing the Mutual Information, Conditional Mutual Information and Correlation (linear & non-linear) of Cryptocurrency pairs and between Crytocurrency and Sentiment pairs.  Includes the calculation of p-values (permutation test) and confidence intervals (bootstrapping).
+Quantifying the dependency between cryptocurrency returns and the effectof textual sentiment by computing the Mutual Information, Conditional Mutual Information and Correlation (linear & non-linear) of Cryptocurrency pairs and between Crytocurrency and Sentiment pairs. Analysis includes the calculation of p-values (permutation test) and confidence intervals (bootstrapping).
 
 __To-Do List__
 - [ ] Optimal number of bins when computing mutual information
 
 
 ### Scaling Behaviour
+Examination of the time scaling properties, including stationarity, autocorrelation and generalized Hurst exponent
 
 
-### Value at Risk
+### Risk Measures
 Calculation of VaR & CVaR with Historical Simulation, Normal Distribution, Student's t-Distribution. Computation of VaR for increasing Time Window with several methods (Parametric, Normal, Student's, EWMA). 
 
 __To-Do List__
@@ -19,7 +21,8 @@ __To-Do List__
 
 
 ### Distribution Fitting
-Parametric and non-parametric estimation of the Body & Tail PDF of a Cryptocurreny. Includes the computation of Power Law Tail Exponents and the calculation of Confidence Intervals through Bootstrapping. 
+Investigation of empirical probability distributions, including the parametric and non-parametric estimation of the Body & Tail PDF  of Cryptocurrencies for different time horizons. Includes the computation of Power Law Tail Exponents and the calculation of Confidence Intervals through Bootstrapping. 
+
 
 __To-Do List__
 - [ ] Kernel Density Estimation
